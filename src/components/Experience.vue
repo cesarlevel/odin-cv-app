@@ -8,18 +8,18 @@ const state = inject('state');
 </script>
 
 <template>
-    <p>Experience</p>
+    <h2>Experience</h2>
     <ul>
         <li v-for="(item, index) in state.experience" :key="index">
             <Input label="Company" v-model="state.experience[index].company"/>
             <Input label="Position" v-model="state.experience[index].position"/>
-            <Input label="Description" v-model="state.experience[index].description"/>
-            <Input label="Date start" type="date" v-model="state.experience[index].dateStart"/>
-            <Input label="Date end" type="date" v-model="state.experience[index].dateEnd"/>
-            <button @click="deleteStateArrayItem(state.experience, index)">Delete</button>
+            <Input label="Description" type="textarea" v-model="state.experience[index].description"/>
+            <Input label="From" type="year" v-model="state.experience[index].yearStart"/>
+            <Input label="To" type="year" v-model="state.experience[index].yearEnd"/>
+            <button class="is-secondary" @click="deleteStateArrayItem(state.experience, index)">Delete</button>
         </li>
     </ul>
-    <button @click="addStateArrayItem(state.experience, new ExperienceItemModel())">Add new</button>
+    <button class="is-fluid" @click="addStateArrayItem(state.experience, new ExperienceItemModel())">+ Add new</button>
 </template>
 
 <style scoped>

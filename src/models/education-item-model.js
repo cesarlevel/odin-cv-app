@@ -1,15 +1,15 @@
 export class EducationItemModel {
-    constructor(name = '', title = '', dateStart = '', dateEnd = '') {
-        this.name = name;
+    constructor(institutionName = '', title = '', yearStart = '', yearEnd = '') {
+        this.institutionName = institutionName;
         this.title = title;
-        this.dateStart = dateStart;
-        this.dateEnd = dateEnd;
+        this.yearStart = yearStart;
+        this.yearEnd = yearEnd;
         
         return {
-            name: this.name,
+            institutionName: this.institutionName,
             title: this.title,
-            dateStart: this.dateStart,
-            dateEnd: this.dateEnd,
+            yearStart: this.yearStart,
+            yearEnd: this.yearEnd,
         }
     }   
 };

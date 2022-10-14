@@ -1,17 +1,17 @@
 export class ExperienceItemModel {
-    constructor(company = '', position = '', description = '', dateStart = '', dateEnd = '') {
+    constructor(company = '', position = '', description = '', yearStart = '', yearEnd = '') {
         this.company = company;
         this.position = position;
         this.description = description;
-        this.dateStart = dateStart;
-        this.dateEnd = dateEnd;
+        this.yearStart = yearStart;
+        this.yearEnd = yearEnd;
         
         return {
             company: this.company,
             position: this.position,
             description: this.description,
-            dateStart: this.dateStart,
-            dateEnd: this.dateEnd,
+            yearStart: this.yearStart,
+            yearEnd: this.yearEnd,
         }
     }   
 };
