@@ -5,6 +5,10 @@ import { ExperienceItemModel } from '../models/experience-item-model';
 import { inject } from 'vue'
 
 const state = inject('state');
+
+function addNewExperienceItem(state) {
+    addStateArrayItem(state, new ExperienceItemModel())
+}
 </script>
 
 <template>
@@ -19,7 +23,7 @@ const state = inject('state');
             <button class="is-secondary" @click="deleteStateArrayItem(state.experience, index)">Delete</button>
         </li>
     </ul>
-    <button class="is-fluid" @click="addStateArrayItem(state.experience, new ExperienceItemModel())">+ Add new</button>
+    <button class="is-fluid" @click="addNewExperienceItem(state.experience)">+ Add new</button>
 </template>
 
 <style scoped>

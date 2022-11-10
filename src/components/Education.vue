@@ -5,6 +5,10 @@ import { EducationItemModel } from '../models/education-item-model';
 import { inject } from 'vue'
 
 const state = inject('state');
+
+function addNewEducationItem(state) {
+    addStateArrayItem(state, new EducationItemModel())
+}
 </script>
 
 <template>
@@ -18,7 +22,7 @@ const state = inject('state');
             <button class="is-secondary" @click="deleteStateArrayItem(state.education, index)">Delete</button>
         </li>
     </ul>
-    <button class="is-fluid" @click="addStateArrayItem(state.education, new EducationItemModel())">+ Add new</button>
+    <button class="is-fluid" @click="addNewEducationItem(state.education)">+ Add new</button>
 </template>
 
 <style scoped>
